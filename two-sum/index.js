@@ -16,14 +16,14 @@ const twoSum = (nums, target) => {
 };
 
 const twoSum2 = (nums, target) => {
-  const hash = {};
+  const complementHash = {};
   for (let i = 0; i < nums.length; i++) {
     const current = nums[i];
     const difference = target - current;
     if (difference in hash) {
-      return [hash[difference], i];
+      return [complementHash[difference], i];
     }
-    hash[current] = i;
+    complementHash[current] = i;
   }
 };
 module.exports = twoSum2;
