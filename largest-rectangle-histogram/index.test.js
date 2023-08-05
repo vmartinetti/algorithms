@@ -1,4 +1,3 @@
-const { test } = require('node:test');
 const largestRectangleArea = require('./index');
 const edgeValues = require('./edgeValues');
 test('Test 1', () => {
