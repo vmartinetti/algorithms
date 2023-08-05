@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "This project is designed for practicing algorithm resolution. It contains various algorithmic problems that you can solve to improve your problem-solving skills. Each problem has a description, input, and output format, and you can test your solution against provided test cases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmartinetti/algorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmartinetti/algorithms/issues"
+  },
+  "homepage": "https://github.com/vmartinetti/algorithms#readme",
+  "dependencies": {
+    "jest": "^29.6.2"
+  }
+}
