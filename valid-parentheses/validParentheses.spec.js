@@ -12,3 +12,7 @@ test('Test 3', () => {
 test('Test 4', () => {
   expect(isValid('[({(())}[()])]')).toEqual(true);
 });
+
+test('Test 5', () => {
+  expect(isValid(')[({(())}[()])]')).toEqual(false);
+});

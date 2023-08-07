@@ -1,26 +1,26 @@
-const isValid = function (s) {
+const isValid2 = function (s) {
   while (s.includes('()') || s.includes('[]') || s.includes('{}')){
     s = s.replace('()', '').replace('[]', '').replace('{}', '');
   }
   return s.length === 0;
 };
-const isValid2 = function (s) {
-  const stack = [];
+const isValid = function (s) {
+  const expectedStack = [];
   const map = {
     '(': ')',
     '[': ']',
     '{': '}'
   };
   for (let i = 0; i < s.length; i++) {
-    const char = s[i];
-    if (map[char]) {
-      stack.push(map[char]);
+    const currentChar = s[i];
+    if (map[currentChar]) { //it's an opening bracket
+      expectedStack.push(map[currentChar]);
     }
-    else if (char !== stack.pop()) {
+    else if (currentChar !== expectedStack.pop()) { //it's a not expected closing bracket
       return false;
     }
   }
-  return stack.length === 0;
+  return expectedStack.length === 0;
 };
 
 module.exports = isValid;
